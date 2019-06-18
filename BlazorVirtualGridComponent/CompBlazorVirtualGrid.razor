@@ -1,0 +1,31 @@
+﻿
+@typeparam TItem
+
+@inherits CompBlazorVirtualGridBase<TItem>
+
+@using BlazorVirtualGridComponent.Modal;
+
+<CompCSS bvgGrid="@bvgGrid"></CompCSS>
+
+
+<CompModal bvgModal="@bvgGrid.bvgModal"></CompModal>
+
+
+@if (bvgGrid.IsReady)
+{
+
+    <h5>@bvgGrid.Name Count @bvgGrid.RowsTotalCount</h5>
+
+
+
+    @*<button class="btn btn-primary" style="margin:5px" onclick="@Cmd1">Cmd1</button>*@
+
+    <CompLayout bvgGrid="@bvgGrid" ActualRender="@ActualRender"></CompLayout>
+
+}
+else
+{
+    <br />
+    <h3>Loading...</h3>
+    <h3>@bvgGrid.Name</h3>
+}
