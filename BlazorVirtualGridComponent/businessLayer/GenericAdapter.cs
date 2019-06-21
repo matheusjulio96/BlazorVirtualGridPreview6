@@ -7,7 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading.Tasks;
-using System.Linq.Dynamic.Core;
+//using System.Linq.Dynamic.Core;
 using static BlazorVirtualGridComponent.classes.BvgEnums;
 using BlazorSplitterComponent;
 
@@ -106,7 +106,7 @@ namespace BlazorVirtualGridComponent.businessLayer
         public static IEnumerable<T> GetSortedRowsList(IQueryable<T> list, string OrderByClause)
         {
             Console.WriteLine($"GenericAdapter.GetSortedRowsList:{OrderByClause}");
-            return list.OrderBy(OrderByClause);
+            return list.OrderByM(OrderByClause);
         }
 
 

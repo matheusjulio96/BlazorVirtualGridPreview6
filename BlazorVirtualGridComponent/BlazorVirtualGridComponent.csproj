@@ -20,7 +20,6 @@
     <PackageReference Include="BlazorSplitterComponent" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Browser" Version="3.0.0-preview6.19307.2" />
     <PackageReference Include="Mono.WebAssembly.Interop" Version="3.0.0-preview6.19304.6" />
-    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.17" />
   </ItemGroup>
 
 </Project>
