@@ -359,7 +359,7 @@ namespace BlazorVirtualGridComponent.classes
         {
 
             FrozenTableWidth = ColumnsOrderedList.Where(x => x.IsFrozen).Sum(x => x.ColWidth);
-            NonFrozenTableWidth = bvgSize.W - FrozenTableWidth;
+            NonFrozenTableWidth = bvgSize.W - FrozenTableWidth - 200;
 
             //It was more correct to calculate for nonfrozen but when frozen columns resize happens
             // we get different Displayed columns count and should full refresh component, which is slow

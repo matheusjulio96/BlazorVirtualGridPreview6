@@ -44,22 +44,21 @@ namespace BlazorVirtualGridComponent
 
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
-
- 
-
             base.BuildRenderTree(builder);
-
           
             int k = -1;
 
-          
+            builder.OpenElement(k++, "div");
+            builder.AddAttribute(k++, "class", "myGridContainer");
 
             builder.OpenElement(k++, "div");
             builder.AddAttribute(k++, "class", "myContainer");
             builder.AddAttribute(k++, "id", bvgGrid.DivContainerElementID);
 
+            
 
-                builder.AddAttribute(k++, "onwheel", OnWheel);
+
+            builder.AddAttribute(k++, "onwheel", OnWheel);
 
                 if (ActualRender)
                 {
@@ -73,11 +72,9 @@ namespace BlazorVirtualGridComponent
 
                 }
 
+            builder.CloseElement(); //div
 
-                builder.CloseElement(); //div container
-           
-
-            
+            builder.CloseElement(); //div container
         }
 
 

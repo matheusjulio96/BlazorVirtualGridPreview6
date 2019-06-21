@@ -1,17 +1,4 @@
-var resizeId;
 
-window.addEventListener("resize", onResize, false);
-
-
-function onResize() {
-    clearTimeout(resizeId);
-    resizeId = setTimeout(doneResizing, 100);
-    
-}
-
-function doneResizing() {
-    DotNet.invokeMethodAsync('BlazorVirtualGridComponent', 'InvokeOnResize');
-}
 
 function updateCells(IDs, b) {
     let j = 0;

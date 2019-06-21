@@ -90,7 +90,8 @@ namespace BlazorVirtualGridComponent.businessLayer
            
 
             c = new BCssItem(".CDiv", StyleID1);
-            c.Values.Add("border-style", "solid");
+            c.Values.Add("border-style", "solid"); //borda interna e esquerda
+            //c.Values.Add("border-radius", "5px");
             c.Values.Add("overflow", "hidden");
             c.Values.Add("white-space", "nowrap");
             c.Values.Add("text-overflow", "ellipsis");
@@ -103,7 +104,8 @@ namespace BlazorVirtualGridComponent.businessLayer
 
 
             c = new BCssItem(".ColumnDiv", StyleID1);
-            c.Values.Add("border-style", "solid");
+            c.Values.Add("border-style", "solid"); //borda interna e externa headers
+            //c.Values.Add("border-radius", "5px");
             c.Values.Add("font-weight", "bold");
             c.Values.Add("display", "flex");
             c.Values.Add("flex-direction", "row");
@@ -121,16 +123,18 @@ namespace BlazorVirtualGridComponent.businessLayer
             blazorCSS.Children.Add(c);
 
 
-
+            //borda das frozen
             c = new BCssItem(".Border1", StyleID1);
             c.Values.Add("border", "1px solid black");
+            //c.Values.Add("border-radius", "5px");
             blazorCSS.Children.Add(c);
 
-
+            //borda das non-frozen
             c = new BCssItem(".Border2", StyleID1);
             c.Values.Add("border-style", "solid");
             c.Values.Add("border-color", "black");
             c.Values.Add("border-width", "1px 1px 1px 0");
+            //c.Values.Add("border-radius", "5px");
             blazorCSS.Children.Add(c);
 
             GenerateCellCSS();
